@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --body-color: #ecf8ff;
+  --background-color: #ffffff;
+  --primary-color: #000000;
+  --secondary-color: rgba(0, 0, 0, 0.6);
+}
+
+.dark {
+  --body-color: #141d26;
+  --background-color: #243447;
+  --primary-color: #ffffff;
+  --secondary-color: rgba(255, 255, 255, 0.6);
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.twitter {
+  background-color: var(--body-color);
+  display: grid;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+
+.twitter__container {
+  padding: 2.1875rem 1.9375rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  background: var(--background-color);
+  border: 1px solid rgba(29, 161, 242, 0.2);
+  box-shadow: 0px 15px 60px rgba(29, 161, 242, 0.15);
+  border-radius: 10px;
+  color: var(--primary-color);
+}
+
+.twitter__container.dark {
+  border-color: none;
+  box-shadow: 0px 15px 60px rgba(52, 81, 116, 0.15);
+}
+
+.twitter__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.twitter__profile {
+  display: flex;
+  column-gap: 0.5rem;
+  align-items: center;
+}
+
+.twitter__profile img {
+  width: 40px;
+  height: 40px;
+}
+
+#twitter-icon {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#twitter-icon svg {
+  z-index: 1;
+  width: 27.5px;
+  height: 22.5px;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.username {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--secondary-color);
+}
+
+.twitter__footer {
+  display: flex;
+  column-gap: 2rem;
+  color: var(--secondary-color);
+  align-items: center;
+}
+
+.like {
+  display: flex;
+  column-gap: 0.5rem;
+  align-items: center;
+}
+
+.like svg {
+  width: 21px;
+  height: 18px;
+}
+
+.like svg path {
+  stroke: var(--secondary-color);
+}
+
+@media screen and (min-width: 600px) {
+  .twitter {
+    justify-content: center;
+  }
+
+  .twitter__container {
+    width: 601px;
+  }
+}
