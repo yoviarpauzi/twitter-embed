@@ -61,6 +61,13 @@
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script>
+      let twitterIcon = document.querySelector("#twitter-icon");
+      twitterIcon.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        document.querySelector(".twitter__container").classList.toggle("dark");
+      });
+    </script>
   </body>
 </html>
+
